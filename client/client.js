@@ -42,7 +42,7 @@ client.on('message', function (topic, message, packet) {
   console.log('MQTT client received message');
   console.log(' * topic', topic);
   console.log(' * message', message);
-  console.log(' * message (stringified)', JSON.stringify(message));
+  console.log(' * message (unpacked)', message.toString('utf8'));
   console.log(' * packet', packet);
   console.log(' * payload (unpacked)', packet.payload.toString('utf8'));
 });

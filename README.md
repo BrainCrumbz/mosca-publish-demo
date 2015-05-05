@@ -10,11 +10,20 @@ MQTT broker is starting...
 MQTT broker is up and running
 MQTT broker is up and running
 MQTT broker is ready
- 
- 
+MQTT client connected, id mqttjs_54003fcc
+MQTT broker detected a published message
+ * packet: { topic: '$SYS/NJYiStZ7/new/clients',
+  payload: 'mqttjs_54003fcc' }
+ * packet payload: mqttjs_54003fcc
+MQTT broker detected a published message
+ * packet: { topic: '$SYS/NJYiStZ7/new/subscribes',
+  payload: 'mqttjs_54003fcc' }
+ * packet payload: mqttjs_54003fcc
+
+
 #########################################
 MQTT broker sending message to board ..
- 
+
 MQTT broker detected a published message
  * packet: { topic: 'broker/someTopic',
   payload: '{"fieldA":"a","fieldB":"b"}',
@@ -31,13 +40,13 @@ MQTT Client is starting...
 MQTT client connected
 MQTT client subscribing to broker/someTopic...
 subscribe granted: [ { topic: 'broker/someTopic', qos: 1 } ]
- 
- 
+
+
 #########################################
 MQTT client received message
  * topic broker/someTopic
  * message <Buffer 7b 22 66 69 65 6c 64 41 22 3a 22 61 22 2c 22 66 69 65 6c 64 42 22 3a 22 62 22 7d>
- * message (stringified) [123,34,102,105,101,108,100,65,34,58,34,97,34,44,34,102,105,101,108,100,66,34,58,34,98,34,125]
+ * message (unpacked) {"fieldA":"a","fieldB":"b"}
  * packet { cmd: 'publish',
   retain: false,
   qos: 1,
